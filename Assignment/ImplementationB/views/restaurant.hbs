@@ -1,0 +1,21 @@
+<h1>{{restaurant.name}}</h1>
+<p><strong>Cuisine:</strong> {{restaurant.cuisine}}</p>
+<p><strong>Rating:</strong> ⭐ {{restaurant.rating}}</p>
+
+<p><strong>Status:</strong> 
+  {{#if restaurant.isOpen}}
+    <span style="color: green;">Open Now</span>
+  {{else}}
+    <span style="color: red;">Currently Closed</span>
+  {{/if}}
+</p>
+
+<h3>Menu Items:</h3>
+<ul>
+  {{#each restaurant.menu}}
+    <li>{{this}}</li>
+  {{/each}}
+</ul>
+
+<br>
+<a href="/restaurants">Back to Restaurants</a>

@@ -1,0 +1,15 @@
+<h1>{{title}}</h1>
+<ul>
+  {{#each restaurants}}
+    <li>
+      <a href="/restaurant/{{this.id}}"><strong>{{this.name}}</strong></a> - {{this.cuisine}}
+      {{#if this.isOpen}}
+        <span style="color: green;">(Open)</span>
+      {{else}}
+        <span style="color: red;">(Closed)</span>
+      {{/if}}
+    </li>
+  {{/each}}
+</ul>
+<br>
+<a href="/">Back to Home</a> 
